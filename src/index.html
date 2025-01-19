@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frontend Mentor | Contact form</title>
+
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/fonts.css">
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+<main class="contact-form">
+  <h1 class="contact-form__title">Contact Us</h1>
+  <form class="contact-form__form js-form" onsubmit="return false;" action="">
+    <!-- First Name & Last Name -->
+    <div class="contact-form__input-section">
+      <div class="contact-form__input-container">
+        <label class="contact-form__label star-label" for="first-name">First Name</label>
+        <input class="contact-form__input js-first-name" type="text" id="first-name" name="first-name">
+        <p class="contact-form__error-label">This field is required</p>
+      </div>
+      <div class="contact-form__input-container">
+        <label class="contact-form__label star-label" for="last-name">Last Name</label>
+        <input class="contact-form__input js-last-name" type="text" id="last-name" name="last-name">
+        <p class="contact-form__error-label">This field is required</p>
+      </div>
+    </div>
+
+    <!-- Email -->
+    <div class="contact-form__input-container">
+      <label class="contact-form__label star-label" for="email">Email Address</label>
+      <input class="contact-form__input js-email" type="text" id="email" name="email">
+      <p class="contact-form__error-label">Please enter a valid email address</p>
+    </div>
+
+    <!-- Radio Box -->
+    <div>
+      <label class="contact-form__label star-label">Query Type</label>
+
+      <div class="contact-form__radio-section">
+        <div class="contact-form__radio-container js-radio-container">
+          <input class="js-radios" type="radio" id="html" name="fav_language" value="HTML">
+          <label class="contact-form__label" for="html">General Enquiry</label><br>
+        </div>
+        <div class="contact-form__radio-container js-radio-container">
+          <input class="js-radios" type="radio" id="css" name="fav_language" value="CSS">
+          <label class="contact-form__label" for="css">Support Request</label><br>
+        </div>
+      </div>
+      <p class="contact-form__error-label">Please select a query type</p>
+    </div>
+
+    <!-- Message -->
+    <div class="contact-form__textarea-container">
+      <label class="contact-form__label star-label" for="message">Message</label>
+      <textarea class="contact-form__textarea js-message" id="message" name="message" rows="10" cols="30"></textarea>
+      <p class="contact-form__error-label">This field is required</p>
+    </div>
+
+    <!-- Checkbox -->
+    <div class="contact-form__checkbox-section">
+      <div class="contact-form__checkbox-container">
+        <input  class="js-consent" type="checkbox" id="consent" name="consent" value="consent">
+        <label class="star-label" for="consent">I consent to being contacted by the team</label>
+      </div>
+      <p class="contact-form__error-label">To submit this form, please consent to being contacted</p>
+    </div>
+
+    <!-- Button -->
+    <button class="contact-form__button js-button">Submit</button>
+  </form>
+</main>
+
+<div class="contact-form__success-popup js-popup">
+  <p class="contact-form__success-popup-title"><img src="img/icon-success-check.svg" alt="success mark image">Message Sent!</p>
+  <p class="contact-form__success-popup-text">Thanks for completing the form. We’ll be in touch soon!</p>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
